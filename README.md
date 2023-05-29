@@ -6,3 +6,17 @@
   <p>  Repositorio para el proyecto del curso: SC-502 - Ambiente Web Cliente/Servidor</p>
   </div>
 <hr>
+
+## Entity-Relationship Diagram:
+### Entities:  
+* Usuario
+* Rol
+* Direccion
+* Servicio
+* TipoServicio
+* Producto
+* TipoProducto
+* Compra
+* Reseñas
+### Diagram: 
+![Diagrama](https://github.com/GaboSO21/SC502_2C2023_G5/blob/340c9ce6ecec630e2de98f47ae892f4595b1e6bd/Diagrama.jpeg?raw=true "Diagrama")
