@@ -9,7 +9,7 @@ CREATE TABLE Rol (
 );
 
 CREATE TABLE Direccion (
-    idDir int not null,
+    idDireccion int not null,
     provincia varchar(20) not null,
     canton varchar(20) not null,
     distrito varchar(20) not null,
@@ -45,7 +45,7 @@ CREATE TABLE Servicio (
     img varchar(200) not null,
     descripcion varchar(45) not null,
     cupos int not null,
-    status boolean not null,
+    estatus boolean not null,
     fecha date not null,
     idTipoServicio int not null,
     FOREIGN KEY(idTipoServicio) REFERENCES TipoServicio(idTipoServicio),
@@ -73,7 +73,7 @@ CREATE TABLE Producto (
     nombre varchar(45) not null,
     descripcion varchar(200) not null,
     stock int not null,
-    status boolean not null,
+    estatus boolean not null,
     precio float not null,
     idTipoProducto int not null,
     FOREIGN KEY(idTipoProducto) REFERENCES TipoProducto(idTipoProducto),
@@ -82,7 +82,7 @@ CREATE TABLE Producto (
 
 CREATE TABLE Resenna (
     idResenna int not null,
-    status boolean not null,
+    estatus boolean not null,
     descripcion varchar(255) not null,
     idProducto int not null,
     idUsuario int not null,
@@ -95,7 +95,7 @@ CREATE TABLE Compra (
     idCompra int not null,
     numeroTracking varchar(200) not null,
     precioTotal float not null,
-    status boolean not null,
+    estatus int not null, -- 0 = pendiente, 1 = en proceso, 2 = revision, 3 = cancelado, 4= entregado
     idUsuario int not null,
     FOREIGN KEY(idUsuario) REFERENCES Usuario(idUsuario),
     PRIMARY KEY(idCompra)
