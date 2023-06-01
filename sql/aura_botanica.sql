@@ -14,7 +14,7 @@ CREATE TABLE Direccion (
     canton varchar(20) not null,
     distrito varchar(20) not null,
     codPostal int not null,
-    senalesExactas varchar(20) not null,
+    senalesExactas varchar(500) not null,
     PRIMARY KEY(idDir)
 );
 
