@@ -1,0 +1,110 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io
+
+/////------------CREACION TABLAS------------------
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io
+
+/////------------CREACION TABLAS------------------
+
+Table Rol { //completa
+  idRol int [PK]
+  nombre varchar
+}
+
+Table Direccion{ //completa
+  idDireccion int [PK]
+  provincia varchar
+  canton varchar
+  distrito varchar
+  codPostal int
+  senalesExactas varchar
+}
+
+Table Usuario{ //completa
+    idUsuario int [PK]
+    primApellido varchar
+    segApellido varchar
+    cedula varchar
+    correo varchar
+    contrasenna varchar
+    //Relacion Rol-Usuario
+    Rol int [ref: > Rol.idRol] // many-to-one
+    
+    //Relacion Direccion-Usuario
+    Direccion int [ref: - Direccion.idDireccion] //one-to-one
+}
+
+Table TipoServicio { //completa
+  idTipoServicio int [PK]
+  nombre varchar
+  descripcion varchar
+}
+
+Table Servicio { //completa
+  idServicio int [PK]
+  nombre varchar
+  img varchar
+  descripcion varchar
+  cupos int
+  estatus boolean
+  fecha datetime
+  //Relacion TipoServicio-Sevicio
+  idTipoServicio int [ref: - TipoServicio.idTipoServicio] //one-to-one
+}
+
+Table ServicioUsuario { //completa
+  idServicioUsuario int [PK]
+
+  //Relacion Usuario-ServicioUsuario
+  idUsuario int [ref: < Usuario.idUsuario] //one-to-many
+  //Relacion Servicio-ServicioUsuario
+  idServicio int [ref: - Servicio.idServicio] //one-to-one
+}
+
+Table TipoProducto { //completa
+    idTipoProducto int [PK]
+    nombre varchar
+    descripcion varchar    
+}
+
+Table Producto { //completa
+    idProducto int [PK]
+    nombre varchar
+    descripcion varchar
+    stock int
+    estatus boolean
+    precio float
+    //Relacion TipoProducto-Producto
+    TipoProducto int [ref: - TipoProducto.idTipoProducto] //one-to-one
+}
+
+Table Resenna { //completa
+  idResenna int [PK]
+  estatus boolean
+  descripcion varchar
+  //Relacion Producto-Resenna
+  idProducto int [ref: - Producto.idProducto] //one-to-one
+  //Relacion Producto-Resenna
+  idUsuario int [ref: < Usuario.idUsuario] //one-to-one
+}
+
+Table Compra { //completa
+    idCompra int [PK]
+    numeroTracking varchar
+    precioTotal float
+    estatus int // 0 = pendiente, 1 = en proceso, 2 = revision, 3 = cancelado, 4= entregado
+    //Relacion Compra-Usuario
+    Usuario int [ref: < Usuario.idUsuario] //one-to-many
+}
+
+Table CompraProducto { //completa
+    idCompraProducto int [PK]
+    cantidad int
+
+    //Relacion CompraProducto-Compra
+    Compra int [ref: <> Compra.idCompra] //many-to-many
+
+    //Relacion CompraProducto-Producto
+    Producto int [ref: <> Producto.idProducto] //many-to-many
+}
