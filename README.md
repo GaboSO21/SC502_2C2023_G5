@@ -17,6 +17,6 @@
 * Producto
 * TipoProducto
 * Compra
-* Reseñas
+* Reseñass
 ### Diagram: 
 ![Diagrama](https://github.com/GaboSO21/SC502_2C2023_G5/blob/340c9ce6ecec630e2de98f47ae892f4595b1e6bd/Diagrama.jpeg?raw=true "Diagrama")
