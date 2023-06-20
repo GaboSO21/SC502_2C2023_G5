@@ -77,8 +77,89 @@
         </div>
         <!-- end: modal -->
 
-        
+        <!-- modal agregar stock -->
+        <div class="modal fade" id="modal2-agregaStock" tabindex="-1" role="modal" aria-labelledby="modal-label-2" aria-hidden="true">
+            <div class="modal-dialog modal-md">
+                <form class="form-validate" action="" role="form" method="post">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 id="modal-label-3" class="modal-title">Agregando stock el Producto:</h4>
+                            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-row">
+                                    <input hidden type="number" name="txt_idArticulo" value="">
+                                <div class="form-group col-md-6">
+                                    <label for="name">Cantidad a agregar</label>
+                                    <input type="number" value="" class="form-control" name="txt_nombreProducto" aria-required="true" required class="form-control required name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button data-dismiss="modal" class="btn btn-b" type="button">Cerrar</button>
+                            <button class="btn btn-b" type="submit" id="form-submit">Guardar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- end: agregar stock -->
 
+        <!-- modal lista usuarios-->
+        <div class="modal fade" id="modal3-lista" tabindex="-1" role="modal" aria-labelledby="modal-label-2" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 id="modal-label-3" class="modal-title">Listado de Usuarios</h4>
+                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="page-content" class="no-sidebar">
+                            <div class="container">
+                                <!-- DataTable -->
+                                <div class="row mb-3">
+                                    <div class="col-lg-6">
+                                        <h4>Tabla de Usuarios</h4>
+                                        <p>Mostrando todos los usuarios del sistema</p>
+                                    </div>
+                                </div>
+                
+                                <div class="col-lg-12">
+                                    <table id="datatable" class="table table-bordered table-hover" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th># Usuario</th>
+                                                <th>Nombre</th>
+                                                <th>Correo</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th># Usuario</th>
+                                                <th>Nombre</th>
+                                                <th>Correo</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- end: DataTable -->
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button data-dismiss="modal" class="btn btn-b" type="button">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end: modal -->
 
         <!-- Page title -->
         <section id="page-title" data-bg-parallax="../../assets/img/flores_wall.jpg">
@@ -106,7 +187,7 @@
                         <p>Mostrando todos los Servicios del sistema</p>
                     </div>
                     <div class="col-lg-6 text-right">
-                        <a type="button" class="btn btn-light" href="page-registro-Servicios.html"><i class="icon-plus"></i>Agregar Servicio</a>
+                        <a type="button" class="btn btn-light" href="page-registro-Servicios.html"><i class="icon-plus"></i>Agregar Usuario</a>
                     </div>
                 </div>
 
@@ -143,6 +224,8 @@
                                 </td>
                                 <td style="font-size: 20px;">
                                     <a data-target="#modal1-editar" data-toggle="modal" href="#" title="Editar"><i class="fa fa-edit"></i></a>
+                                    <a data-target="#modal2-agregaStock" data-toggle="modal" href="#" title="Agregar Stock"><i class="fa fa-plus"></i></a>
+                                    <a data-target="#modal3-lista" data-toggle="modal" href="#" title="Listado Usuarios"><i class="fa fa-list"></i></a>
                                 </td>
                             </tr>
                         </tbody>

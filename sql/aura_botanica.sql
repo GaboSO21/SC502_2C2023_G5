@@ -20,6 +20,7 @@ CREATE TABLE Direccion (
 
 CREATE TABLE Usuario (
     idUsuario int not null,
+    nombre varchar(45) not null,
     primApellido varchar(45) not null,
     segApellido varchar(45) not null,
     cedula varchar(45) not null,
