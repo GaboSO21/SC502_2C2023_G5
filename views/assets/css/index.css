@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Pacifico&family=Roboto&display=swap');
+
+body{
+    background-color: #D2D8E5;
+    padding: 1.5%;
+}
+
+.nav-container, .main-info-container, .data-container, .productos, .servicios{
+    display: flex;
+}
+
+.nav-container{
+    justify-content: space-between;
+    width: 80%;
+}
+
+.main-info-container{
+    font-family: 'Pacifico';
+    font-size: 2rem;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.nav-title{
+    text-align: center;
+    align-items: center;
+    
+}
+
+.logo-img{
+    width: 40%;
+}
+
+.data-container{
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.productos,.servicios{
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.bg-container{
+    background-color: #445F5C;
+    width: 32%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    position: absolute;
+    z-index: -10;
+}
+
+
+
