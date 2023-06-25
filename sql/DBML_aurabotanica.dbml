@@ -2,14 +2,23 @@
 // Docs: https://dbml.dbdiagram.io
 
 /////------------CREACION TABLAS------------------
-// Use DBML to define your database structure
-// Docs: https://dbml.dbdiagram.io
-
-/////------------CREACION TABLAS------------------
 
 Table Rol { //completa
   idRol int [PK]
   nombre varchar
+}
+
+Table Usuario{ //completa
+    idUsuario int [PK]
+    nombre varchar
+    primApellido varchar
+    segApellido varchar
+    cedula varchar
+    correo varchar
+    contrasenna varchar
+    
+    //Relacion Rol-Usuario
+    idRol int [ref: > Rol.idRol] // many-to-one
 }
 
 Table Direccion{ //completa
@@ -19,22 +28,9 @@ Table Direccion{ //completa
   distrito varchar
   codPostal int
   senalesExactas varchar
+  //Relacion Direccion-Usuario
+  idUsuario int [ref: - Usuario.idUsuario] //one-to-one
 }
-
-Table Usuario{ //completa
-    idUsuario int [PK]
-    primApellido varchar
-    segApellido varchar
-    cedula varchar
-    correo varchar
-    contrasenna varchar
-    //Relacion Rol-Usuario
-    Rol int [ref: > Rol.idRol] // many-to-one
-    
-    //Relacion Direccion-Usuario
-    Direccion int [ref: - Direccion.idDireccion] //one-to-one
-}
-
 Table TipoServicio { //completa
   idTipoServicio int [PK]
   nombre varchar
