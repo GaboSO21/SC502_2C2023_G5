@@ -5,9 +5,9 @@
         <div class="container">
             <!--Logo-->
             <div id="logo">
-                <a href="http://localhost/SC502_2C2023_G5/">
-                    <span class="logo-default">AURA BOTANICA</span>
-                    <span class="logo-dark">AURA BOTANICA</span>
+                <a href="index.php">
+                    <span class="logo-default"><img src="views/assets/img/logo.png" height="50px" alt="AURA BOTANICA"> AURA BOTANICA</span>
+                    <span class="logo-dark"><img src="views/assets/img/logo.png" height="50px" alt="AURA BOTANICA"> AURA BOTANICA</span>
                 </a>
             </div>
             <!--End: Logo-->

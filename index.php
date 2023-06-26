@@ -7,7 +7,8 @@
     <!-- Stylesheets & Fonts -->
     <link href="views/assets/css/plugins.css" rel="stylesheet">
     <link href="views/assets/css/style.css" rel="stylesheet">
-    
+    <!-- ICO -->
+    <link rel="shortcut icon" href="./views/assets/img/logo.png" type="image/x-icon">
 </head>
 <body>
     <!-- Body Inner -->
@@ -15,7 +16,7 @@
         <!-- navbar --><?php require_once "views/parts/navbar.php"; ?><!-- End: navbar -->
         
         <!-- Page title -->
-        <section id="page-title" data-bg-parallax="../../IMG/wallpaper2-1.png">
+        <section id="page-title" data-bg-parallax="./views/assets/img/flores_wall.jpg">
             <div class="container">
                 <div class="page-title">
                     <h1>INDEX</h1>

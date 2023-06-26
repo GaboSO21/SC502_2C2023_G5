@@ -64,7 +64,7 @@
     </div>
     <div class="copyright-content">
         <div class="container">
-            <div class="copyright-text text-center" style="color:white;">&copy; 2022 Cargo Expreso.<a href="https://www.cargoexpreso.com" target="_blank" rel="noopener"> G.A.T</a> </div>
+            <div class="copyright-text text-center" style="color:white;">&copy; 2023 <a href="https://www.instagram.com/aurabotanica_/" target="_blank" rel="noopener">AuraBotanica</a> </div>
         </div>
     </div>
 </footer>

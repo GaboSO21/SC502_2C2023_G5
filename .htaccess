@@ -1,5 +1,6 @@
 RewriteEngine On
-RewriteRule ^(.*)$ index.php?url=$1 [L, QSA]
+RewriteBase /
+RewriteRule ^index\.php$ - [L,QSA]
 
-
+DirectoryIndex index.php 
 
