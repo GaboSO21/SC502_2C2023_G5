@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inventario Servicios</title>
+    <title>Listado de Compras</title>
     <!-- DataTables css -->
     <link href='../../assets/plugins/datatables/datatables.min.css' rel='stylesheet' />
     <!-- Stylesheets & Fonts -->
@@ -24,47 +24,38 @@
                 <form class="form-validate" action="" role="form" method="post">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 id="modal-label-3" class="modal-title">Editando el Servicio:</h4>
+                            <h4 id="modal-label-3" class="modal-title">Editando la Compra:</h4>
                             <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
                         </div>
                         <div class="modal-body">
                             <div class="form-row">
-                                    <input hidden type="number" name="txt_idServicio" value="">
+                                    <input hidden type="number" name="txt_idCompra" value="">
                                 <div class="form-group col-md-6">
-                                    <label for="name">Nombre del Servicio</label>
-                                    <input type="text" value="" class="form-control" name="txt_nombreServicio" aria-required="true" required class="form-control required name">
+                                    <label for="name">Número de Tracking</label>
+                                    <input type="text" value="" class="form-control" name="txt_numeroTraking" aria-required="true" required class="form-control required name">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="name">Descripcion del Servicio</label>
+                                    <label for="name">Precio Total</label>
                                     <input type="text" value="" class="form-control" name="txt_descripcionServicio" aria-required="true" required class="form-control required name">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="name">Cupos del Servicio</label>
-                                    <input type="number" value="" class="form-control" name="txt_nombreServicio" aria-required="true" required class="form-control required name">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="name">Precio del Servicio</label>
-                                    <input type="number" value="" class="form-control" name="txt_nombreServicio" aria-required="true" required class="form-control required name">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="date">Fecha del servicio</label>
-                                    <input type="date" name="txt_fechaServicio" aria-required="true" required class="form-control required name" placeholder="Introduzca el codigo de barras..">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="gender">Tipo del Servicio</label>
-                                    <select class="form-control" name="txt_statusProdcuto" type="text" aria-required="true" required class="form-control required select" type="email" aria-required="true" required class="form-control required status" >
-                                            <option value="1" selected>Select</option>
-                                            <option value="2" >1</option>
+                                    <label for="name">Estatus</label>
+                                    <select class="form-control" name="txt_estatus" type="text" aria-required="true" required class="form-control required select" type="email" aria-required="true" required class="form-control required status" >
+                                        <option value="0" selected>Pendiente</option>
+                                        <option value="1" >En Proceso</option>
+                                        <option value="2" >Revisión</option>
+                                        <option value="3" >Cancelado</option>
+                                        <option value="4" >Entregado</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="gender">Status del Servicio</label>
-                                    <select class="form-control" name="txt_statusProdcuto" type="text" aria-required="true" required class="form-control required select" type="email" aria-required="true" required class="form-control required status" >
-                                            <option value="1" selected>Activo</option>
-                                            <option value="2" >Desactivado</option>
-                                    </select>
+                                    <label for="date">Fecha</label>
+                                    <input type="date" value="" class="form-control" name="txt_fecha" aria-required="true" required class="form-control required name">
                                 </div>
-
+                                <div class="form-group col-md-6">
+                                    <label for="name">ID de Usuario</label>
+                                    <input type="name" name="txt_idUsuario" aria-required="true" required class="form-control required name">
+                                </div>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -76,34 +67,6 @@
             </div>
         </div>
         <!-- end: modal -->
-
-        <!-- modal agregar stock -->
-        <div class="modal fade" id="modal2-agregaStock" tabindex="-1" role="modal" aria-labelledby="modal-label-2" aria-hidden="true">
-            <div class="modal-dialog modal-md">
-                <form class="form-validate" action="" role="form" method="post">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 id="modal-label-3" class="modal-title">Agregando stock el Producto:</h4>
-                            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-row">
-                                    <input hidden type="number" name="txt_idArticulo" value="">
-                                <div class="form-group col-md-6">
-                                    <label for="name">Cantidad a agregar</label>
-                                    <input type="number" value="" class="form-control" name="txt_nombreProducto" aria-required="true" required class="form-control required name">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button data-dismiss="modal" class="btn btn-b" type="button">Cerrar</button>
-                            <button class="btn btn-b" type="submit" id="form-submit">Guardar</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <!-- end: agregar stock -->
 
         <!-- modal lista usuarios-->
         <div class="modal fade" id="modal3-lista" tabindex="-1" role="modal" aria-labelledby="modal-label-2" aria-hidden="true">
@@ -162,15 +125,15 @@
         <!-- end: modal -->
 
         <!-- Page title -->
-        <section id="page-title" data-bg-parallax="../../assets/img/flores_wall.jpg">
+        <section id="page-title" data-bg-parallax="../../assets/img/planta_wall_compras.jpg">
             <div class="container">
                 <div class="page-title">
-                    <h1>Inventario de Servicios</h1>
+                    <h1>Listado de Compras</h1>
                 </div>
                 <div class="breadcrumb">
                     <ul>
                         <li><a href="">Inicio</a> </li>
-                        <li class="active"><a href="">Inventario de Servicios</a> </li>
+                        <li class="active"><a href="">Listado de Compras</a> </li>
                     </ul>
                 </div>
             </div>
@@ -184,10 +147,7 @@
                 <div class="row mb-3">
                     <div class="col-lg-6">
                         <h4>Tabla de datos</h4>
-                        <p>Mostrando todos los Servicios del sistema</p>
-                    </div>
-                    <div class="col-lg-6 text-right">
-                        <a type="button" class="btn btn-light" href="page-registro-Servicios.html"><i class="icon-plus"></i>Agregar Servicio</a>
+                        <p>Mostrando todas las Compras del sistema</p>
                     </div>
                 </div>
 
@@ -195,51 +155,44 @@
                     <table id="datatable" class="table table-bordered table-hover" style="width:100%">
                         <thead>
                             <tr>
-                                <th># Servicio</th>
-                                <th>Nombre</th>
-                                <th>IMG</th>
-                                <th>descripcion</th>
-                                <th>Tipo</th>
-                                <th>Cupos Disponibles</th>
-                                <th>Precio</th>
+                                <th># Compra</th>
+                                <th>Número de Tracking</th>
+                                <th>Precio Total</th>
                                 <th>Fecha</th>
-                                <th>Estado</th>
+                                <th># Usuario</th>
+                                <th>Estatus</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
+
                                 <td> </td>
                                 <td> </td>
                                 <td> </td>
                                 <td> </td>
                                 <td> </td>
                                 <td class="text-center">
-                                    <span class="badge badge-pill badge-primary">Activo</span>
-                                    <span class="badge badge-pill badge-danger">Realizado</span>
-                                    <span class="badge badge-pill badge-secondary">Inactivo</span>
+                                    <span class="badge badge-pill badge-secondary">Pendiente</span>
+                                    <span class="badge badge-pill badge-primary">En Proceso</span>
+                                    <span class="badge badge-pill badge-warning">Revisión</span>
+                                    <span class="badge badge-pill badge-danger">Cancelado</span>
+                                    <span class="badge badge-pill badge-success">Entregado</span>
                                 </td>
                                 <td style="font-size: 20px;">
                                     <a data-target="#modal1-editar" data-toggle="modal" href="#" title="Editar"><i class="fa fa-edit"></i></a>
-                                    <a data-target="#modal2-agregaStock" data-toggle="modal" href="#" title="Agregar Stock"><i class="fa fa-plus"></i></a>
                                     <a data-target="#modal3-lista" data-toggle="modal" href="#" title="Listado Usuarios"><i class="fa fa-list"></i></a>
                                 </td>
                             </tr>
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th># Servicio</th>
-                                <th>Nombre</th>
-                                <th>IMG</th>
-                                <th>descripcion</th>
-                                <th>Tipo</th>
-                                <th>Cupos Disponibles</th>
-                                <th>Precio</th>
+                                <th># Compra</th>
+                                <th>Número de Tracking</th>
+                                <th>Precio Total</th>
                                 <th>Fecha</th>
-                                <th>Estado</th>
+                                <th># Usuario</th>
+                                <th>Estatus</th>
                                 <th>Acciones</th>
                             </tr>
                         </tfoot>
