@@ -6,6 +6,7 @@
     <title>Listado Usuarios</title>
     <!-- DataTables css -->
     <link href='../../assets/plugins/datatables/datatables.min.css' rel='stylesheet' />
+    
     <!-- Stylesheets & Fonts -->
     <link href="../../assets/css/plugins.css" rel="stylesheet">
     <link href="../../assets/css/style.css" rel="stylesheet">
@@ -16,7 +17,35 @@
     <!-- end: NAVBAR -->
 
     <div class="body-inner">
-
+        <!-- Header -->
+        <header id="header" class="dark">
+        <div class="header-inner">
+            <div class="container">
+                <!--Logo-->
+                <div id="logo">
+                    <a href="index.php">
+                        <span class="logo-default"><img src="../../assets/img/logo.png" height="50px" > AURA BOTANICA</span>
+                        <span class="logo-dark"><img src="../../assets/img/logo.png" height="50px" > AURA BOTANICA</span>
+                    </a>
+                </div>
+                <!--End: Logo-->
+                <!--Navigation-->
+                <div id="mainMenu">
+                    <div class="container">
+                        <nav>
+                            <ul>
+                                <li><a href="../../../index.php">Home</a></li>
+                                <li><a href="">Usuario</a></li>
+                                <li><a href="">Productos</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- FIN: NAV -->
+            </div>
+        </div>
+    </header>
+        <!-- end: Header -->
         
         <!-- modal editar -->
         <div class="modal fade" id="modal1-editar" tabindex="-1" role="modal" aria-labelledby="modal-label-2" aria-hidden="true">
@@ -122,8 +151,10 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php foreach ($usuarios as $u ): ?>
                             <tr>
-                                <td> </td>
+                                <td><?php echo $u['idUsuario']; ?> </td>
+                                
                                 <td> </td>
                                 <td> </td>
                                 <td> </td>
@@ -138,6 +169,7 @@
                                     <a data-target="#modal1-editar" data-toggle="modal" href="#" title="Editar"><i class="fa fa-edit"></i></a>
                                 </td>
                             </tr>
+                            <?php endforeach; ?>
                         </tbody>
                         <tfoot>
                             <tr>
@@ -169,6 +201,7 @@
 
     <!--Datatables plugin files-->
     <script src='../../assets/plugins/datatables/datatables.min.js'></script>
+
     <script>
         $(document).ready(function () {
             $('#datatable').DataTable({

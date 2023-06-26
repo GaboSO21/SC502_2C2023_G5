@@ -1,13 +1,13 @@
 
 <!-- INICIO: HEADER ADMIN -->
-<header id="header" data-transparent="true" data-fullwidth="true" class="dark submenu-light">
+<header id="header" class="dark">
     <div class="header-inner">
         <div class="container">
             <!--Logo-->
             <div id="logo">
                 <a href="index.php">
-                    <span class="logo-default"><img src="views/assets/img/logo.png" height="50px" alt="AURA BOTANICA"> AURA BOTANICA</span>
-                    <span class="logo-dark"><img src="views/assets/img/logo.png" height="50px" alt="AURA BOTANICA"> AURA BOTANICA</span>
+                    <span class="logo-default"><img src="../assets/img/logo.png" height="50px" > AURA BOTANICA</span>
+                    <span class="logo-dark"><img src="../assets/img/logo.png" height="50px" > AURA BOTANICA</span>
                 </a>
             </div>
             <!--End: Logo-->
@@ -16,18 +16,9 @@
                 <div class="container">
                     <nav>
                         <ul>
-                            
-                            <li class="dropdown"><a href="#">Layout</a>
-                                <ul class="dropdown-menu">
-                                    <li class="dropdown-submenu"><a href="#">Topbar</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="header-topbar.html">Light</a></li>
-                                    <li><a href="header-topbar-dark.html">Dark</a></li>
-                                    <li><a href="header-topbar-transparent.html">Transparent</a></li>
-                                    <li><a href="header-topbar-colored.html">Colored</a></li>
-                                    <li><a href="header-topbar-fullwidth.html">Fullwidth</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="../../index.php">Home</a></li>
+                            <li><a href="../administrador/usuarios/page-usuarios.php">Usuario</a></li>
+                            <li><a href="">Productos</a></li>
                         </ul>
                     </nav>
                 </div>

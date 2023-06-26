@@ -1,7 +1,6 @@
 <?php
-
     class Conectar{
-
+        
         private $con;
 
         public function __construct(){
@@ -9,8 +8,8 @@
             $this->con = new mysqli('localhost', 'root', '', 'aura_botanica');
         }
 
-    }
 
+    }
 ?>
 
 

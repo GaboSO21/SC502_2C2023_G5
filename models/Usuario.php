@@ -14,18 +14,25 @@ class Usuario {
 
     public function get_usuarios(){
 
-        $sql = "SELECT Usuario.*, Direccion.* FROM Usuario 
-                INNER JOIN Direccion ON Usuario.idDir = Direccion.idDireccion";
-        $resultado = $this->db->con->query($sql);
+        // $sql = "SELECT Usuario.*, Direccion.* FROM Usuario 
+        //         INNER JOIN Direccion ON Usuario.idDir = Direccion.idDireccion";
+        // $sql = "SELECT * FROM usuario";
+
+        // $resultado = $this->db->con->query($sql);
     
-        while ($row = $resultado->fetch_assoc()) {
+        // while ($row = $resultado->fetch_assoc()) {
+        //     $this->usuarios[] = $row;
+        // }
+
+        // return $this->usuarios;
+
+        $usuario=mysqli_query("SELECT * FROM usuario");
+        $resultado= mysqli_query($con,$usuario);
+
+        while ($row = mysqli_fetch_assoc($resultado)) {
             $this->usuarios[] = $row;
         }
-
-        return $this->direcciones;
-        
     }
-
 }
 
 ?>
