@@ -8,18 +8,6 @@ CREATE TABLE Rol (
     PRIMARY KEY(idRol)
 );
 
-CREATE TABLE Direccion (
-    idDireccion int not null AUTO_INCREMENT,
-    provincia varchar(20) not null,
-    canton varchar(20) not null,
-    distrito varchar(20) not null,
-    codPostal int not null,
-    senalesExactas varchar(500) not null,
-    idUsuario int not null,
-    FOREIGN KEY(idUsuario) REFERENCES Usuario(idUsuario),
-    PRIMARY KEY(idDir)
-);
-
 CREATE TABLE Usuario (
     idUsuario int not null AUTO_INCREMENT,
     nombre varchar(45) not null,
@@ -33,6 +21,18 @@ CREATE TABLE Usuario (
     PRIMARY KEY(idUsuario)
 );
 
+CREATE TABLE Direccion (
+    idDireccion int not null AUTO_INCREMENT,
+    provincia varchar(20) not null,
+    canton varchar(20) not null,
+    distrito varchar(20) not null,
+    codPostal int not null,
+    senalesExactas varchar(500) not null,
+    idUsuario int not null,
+    FOREIGN KEY(idUsuario) REFERENCES Usuario(idUsuario),
+    PRIMARY KEY(idDireccion)
+);
+
 CREATE TABLE TipoServicio (
     idTipoServicio int not null AUTO_INCREMENT,
     nombre varchar(45) not null,
@@ -42,7 +42,7 @@ CREATE TABLE TipoServicio (
 
 CREATE TABLE Servicio (
     idServicio int not null AUTO_INCREMENT,
-    float int not null,
+    precio float not null,
     nombre varchar(45) not null,
     img varchar(200) not null,
     descripcion varchar(45) not null,
