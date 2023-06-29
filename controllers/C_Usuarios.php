@@ -5,12 +5,12 @@
         private $usuarioModel;
 
         public function __construct() {
-            $this->usuarioModel = new UsuarioModel();
+            $this->usuarioModel = new Usuario();
         }
     
         public function mostrarUsuarios() {
             $usuarios = $this->usuarioModel->obtenerUsuarios();
-            include '../views/administrador/usuarios/page-usuarios.php';
+            require_once('views/administrador/usuarios/page-usuarios.php')
         }
     
         public function agregarUsuario($datosUsuario) {
