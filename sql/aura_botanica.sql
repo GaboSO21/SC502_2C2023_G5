@@ -113,3 +113,6 @@ CREATE TABLE CompraProducto (
     FOREIGN KEY(idProducto) REFERENCES Producto(idProducto),
     PRIMARY KEY(idCompraProducto)
 );
+
+INSERT INTO Rol (nombre) VALUES ('ADMINISTRADOR');
+INSERT INTO Rol (nombre) VALUES ('CLIENTE');
