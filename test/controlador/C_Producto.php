@@ -11,7 +11,9 @@ class C_Producto {
     }
 
     static function agregarProducto() {
-        require_once "vista/administrador/productos/page-productos.php";
+        $modelo = new Producto();
+        $datos = $modelo->mostrarTipos();
+        require_once "vista/administrador/productos/page-registro-productos.php";
     }
 
     static function guardarProducto() {
@@ -27,26 +29,42 @@ class C_Producto {
         header('location:'.admin_products);
     }
 
-    static function actualizarProducto() {
-        $idUsuario = $_REQUEST['idUsuario'];
+    static function guardarTipoProducto() {
         $nombre = $_REQUEST['nombre'];
-        $primerApellido = $_REQUEST['primerApellido'];
-        $segundoApellido = $_REQUEST['segundoApellido'];
-        $cedula = $_REQUEST['cedula'];
-        $correo = $_REQUEST['correo'];
-        $contrasena = $_REQUEST['contrasena'];
-        $idRol = $_REQUEST['idRol'];
-        $data = "nombre='".$nombre."', primApellido='".$primerApellido."', segApellido='".$segundoApellido."', cedula='".$cedula."', correo='".$correo."', contrasenna='".$contrasena."', idRol=".$idRol;
-        $usuario = new Usuario();
-        $dato = $usuario->actualizar($data,$idUsuario);
-        header('location:'.admin_users);
+        $descripcion = $_REQUEST['descripcion'];
+        $data = "'".$nombre."', '".$descripcion."'";
+        $producto = new Producto();
+        $dato = $producto->insertarTipo($data);
+        header('location:'.admin_products_add);
     }
 
+    static function actualizarProducto() {
+        $idProducto = $_REQUEST['idProducto'];
+        $nombre = $_REQUEST['nombre'];
+        $descripcion = $_REQUEST['descripcion'];
+        $precio = $_REQUEST['precio'];
+        $estatus = $_REQUEST['estatus'];
+        $data = "nombre='".$nombre."', descripcion='".$descripcion."', precio=".$precio.", estatus=".$estatus;
+        $producto = new Producto();
+        $dato = $producto->actualizar($data,$idProducto);
+        header('location:'.admin_products);
+    }
+
+    static function agregarStock() {
+        $idProducto = $_REQUEST['idProducto'];
+        $stock = $_REQUEST['stock'];
+        $data = $stock;
+        $producto = new Producto();
+        $dato = $producto->actualizarStock($data,$idProducto);
+        header('location:'.admin_products);
+    }
+
+
     static function eliminarProducto() {
-        $idUsuario = $_REQUEST['idUsuario'];
-        $usuario = new Usuario();
-        $dato = $usuario->eliminar($idUsuario);
-        header('location:'.admin_users);
+        $idProducto = $_REQUEST['idProducto'];
+        $producto = new Producto();
+        $dato = $producto->eliminar($idProducto);
+        header('location:'.admin_products);
     }
 
 }

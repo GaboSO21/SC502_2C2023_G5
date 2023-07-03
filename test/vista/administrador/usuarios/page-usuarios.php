@@ -50,7 +50,7 @@ ini_set('display_errors', '1');
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="name">Rol</label>
-                                    <input type="number" max="2" min="1" value="" class="form-control" name="idRol" aria-required="true" required class="form-control required name">
+                                    <input type="number" max="2" min="1" value="<?php echo $v['idRol'] ?>" class="form-control" name="idRol" aria-required="true" required class="form-control required name">
                                 </div>
                                 <!--temporal-->
                                 <div class="form-group col-md-6">
