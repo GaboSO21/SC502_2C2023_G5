@@ -33,4 +33,9 @@ switch ($uri){
         require 'controlador/C_Login.php';
         C_Login::login();
         break;
+    case '/test/logout':
+        require 'controlador/C_Login.php';
+        C_Login::logout();
+        break;
+
 }

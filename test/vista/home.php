@@ -1,3 +1,12 @@
+<?php 
+
+session_start();
+if(!empty($_SESSION['id'])){
+    echo $_SESSION['id']." ";
+    echo $_SESSION['correo'];
+}
+
+?>
 <?php require_once "vista/parts/header.php" ?>
 <body>
     <!-- Body Inner -->
@@ -19,7 +28,7 @@
         <!-- end: Page title -->
 
 
-        <!-- FOOTER --><?php require_once "vista/parts/footer.php"; ?><!-- END: FOOTER -->
+        <!-- FOOTER --><?php //require_once "vista/parts/footer.php"; ?><!-- END: FOOTER -->
     </div>
     <!-- end: Body Inner -->
     <!-- Scroll top -->

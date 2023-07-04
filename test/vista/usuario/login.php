@@ -13,17 +13,17 @@ ini_set('display_errors', '1');
                 <h2>Bienvenido,<br> Inicia sesión para continuar</h2>
             </div>
     
-        <form class="forms">
+        <form class="forms" method="post">
 
             <img src="../../views/assets/img/logo.png" alt="">
             <h2>AuraBotanica</h2>
 
             <div class="inputs">
 
-                <input class="email" type="email" placeholder="Correo Electronico">
-                <input class="psw" type="password" placeholder="Contraseña">
+                <input name="correo" class="email" type="email" placeholder="Correo Electronico">
+                <input name="contrasenna" class="psw" type="password" placeholder="Contraseña">
 
-                <input class="submit" type="submit" value="Continuar">
+                <input name="loginSubmit" class="submit" type="submit" value="Continuar">
 
             </div>
         </form>

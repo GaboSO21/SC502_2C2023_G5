@@ -18,6 +18,7 @@
                             <li><a href="/test/admin/usuarios">Usuario</a></li>
                             <li><a href="/test/admin/productos">Productos</a></li>
                             <li><a href="/test/login">Login</a></li>
+                            <li><a href="/test/logout">Logout</a></li>
                         </ul>
                     </nav>
                 </div>

@@ -10,6 +10,15 @@ class Usuario {
         $this->Modelo = array();
     }
 
+    public function login($correo, $contrasenna) {
+        $consulta = "SELECT * FROM Usuario WHERE correo='".$correo."' AND contrasenna='".$contrasenna."';";
+        $resultado = $this->db->query($consulta);
+        while($filas = $resultado->FETCHALL(PDO::FETCH_ASSOC)) {
+            $this->datos[]=$filas;
+        }
+        return $this->datos;
+    }
+
     public function mostrar() {
         $consulta = "SELECT * FROM Usuario;";
         $resultado = $this->db->query($consulta);
