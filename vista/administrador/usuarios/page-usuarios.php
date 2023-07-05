@@ -19,7 +19,7 @@ ini_set('display_errors', '1');
             foreach($value as $v): ?>
         <div class="modal fade" id="modal<?php echo $v['idUsuario'] ?>-editar" tabindex="-1" role="modal" aria-labelledby="modal-label-2" aria-hidden="true">
             <div class="modal-dialog modal-lg">
-                <form class="form-validate" action="" role="form" method="get">
+                <form class="form-validate" action="" role="form" method="post">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h4 id="modal-label-3" class="modal-title">Editando el Usuario:</h4>
@@ -98,7 +98,7 @@ ini_set('display_errors', '1');
                         <p>Mostrando todos los usuarios del sistema</p>
                     </div>
                     <div class="col-lg-6 text-right">
-                        <a type="button" class="btn btn-light" href="/test/admin/usuarios?m=agregarUsuario"><i class="icon-plus"></i>Agregar Usuario</a>
+                        <a type="button" class="btn btn-light" href="/SC502_2C2023_G5/admin/usuarios/nuevo"><i class="icon-plus"></i>Agregar Usuario</a>
                     </div>
                 </div>
 
@@ -138,7 +138,7 @@ ini_set('display_errors', '1');
                                     <span class="badge badge-pill badge-primary">
                                         <a data-target="#modal<?php echo $v['idUsuario'] ?>-editar" data-toggle="modal" title="Editar">Editar</a>
                                     </span>
-                                    <span class="badge badge-pill badge-danger"><a href="/test/admin/usuarios?m=eliminarUsuario&idUsuario=<?php echo $v['idUsuario'] ?>">Eliminar</a></span>
+                                    <span class="badge badge-pill badge-danger"><a href="/SC502_2C2023_G5/admin/usuarios/eliminar?idUsuario=<?php echo $v['idUsuario'] ?>">Eliminar</a></span>
                                 </td>
                             </tr>
 

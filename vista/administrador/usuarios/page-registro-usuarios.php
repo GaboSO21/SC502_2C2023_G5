@@ -11,10 +11,10 @@ ini_set('display_errors', '1');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro Usuarios</title>
     <!-- DataTables css -->
-    <link href='../vista/assets/plugins/datatables/datatables.min.css' rel='stylesheet' />
+    <link href='../../vista/assets/plugins/datatables/datatables.min.css' rel='stylesheet' />
     <!-- Stylesheets & Fonts -->
-    <link href="../vista/assets/css/plugins.css" rel="stylesheet">
-    <link href="../vista/assets/css/style.css" rel="stylesheet">
+    <link href="../../vista/assets/css/plugins.css" rel="stylesheet">
+    <link href="../../vista/assets/css/style.css" rel="stylesheet">
 </head>
 <body>
     <!-- NAVBAR -->
@@ -50,7 +50,7 @@ ini_set('display_errors', '1');
                         <p>Mostrando todos los campos de usuario</p>
                     </div>
                     <div class="col-lg-6 text-right">
-                        <a type="button" class="btn btn-light" href="/test/admin/usuarios">Volver al Listado</a>
+                        <a type="button" class="btn btn-light" href="/SC502_2C2023_G5/admin/usuarios">Volver al Listado</a>
                     </div>
                 </div>
                 
@@ -58,7 +58,7 @@ ini_set('display_errors', '1');
                     <div class="content col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <form class="form-validate" action="" role="form" method="get">
+                                <form class="form-validate" action="" role="form" method="post">
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="text">Nombre del Usuario</label>

@@ -59,7 +59,7 @@ class C_Producto {
         header('location:'.admin_products);
     }
 
-
+    
     static function eliminarProducto() {
         $idProducto = $_REQUEST['idProducto'];
         $producto = new Producto();

@@ -12,10 +12,10 @@ ini_set('display_errors', '1');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro Usuarios</title>
     <!-- DataTables css -->
-    <link href='../vista/assets/plugins/datatables/datatables.min.css' rel='stylesheet' />
+    <link href='../../vista/assets/plugins/datatables/datatables.min.css' rel='stylesheet' />
     <!-- Stylesheets & Fonts -->
-    <link href="../vista/assets/css/plugins.css" rel="stylesheet">
-    <link href="../vista/assets/css/style.css" rel="stylesheet">
+    <link href="../../vista/assets/css/plugins.css" rel="stylesheet">
+    <link href="../../vista/assets/css/style.css" rel="stylesheet">
 </head>
 <body>
 
@@ -65,7 +65,7 @@ ini_set('display_errors', '1');
                             </table>
                         </div>
                         <!-- end: tabla -->
-                        <form class="form-validate" action="" role="form" method="get">
+                        <form class="form-validate" action="" role="form" method="post">
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="name">Nombre de la categoria</label>
@@ -119,7 +119,7 @@ ini_set('display_errors', '1');
                                 <span class="h4">Detalle del producto</span>
                             </div>
                             <div class="card-body">
-                                <form class="form-validate" action="" role="form" method="get">
+                                <form class="form-validate" action="" role="form" method="post">
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="text">Nombre</label>
@@ -164,11 +164,11 @@ ini_set('display_errors', '1');
         <!-- end: FOOTER -->
 
             <!--Plugins-->
-        <script src="../vista/assets/js/jquery.js"></script>
-        <script src="../vista/assets/js/plugins.js"></script>
+        <script src="../../vista/assets/js/jquery.js"></script>
+        <script src="../../vista/assets/js/plugins.js"></script>
 
         <!--Template functions-->
-        <script src="../vista/assets/js/functions.js"></script>
+        <script src="../../vista/assets/js/functions.js"></script>
 
         <!--Datatables plugin files-->
         <script src='../../assets/plugins/datatables/datatables.min.js'></script>

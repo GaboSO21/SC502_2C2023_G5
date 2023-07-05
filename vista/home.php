@@ -28,7 +28,7 @@ if(!empty($_SESSION['id'])){
         <!-- end: Page title -->
 
 
-        <!-- FOOTER --><?php //require_once "vista/parts/footer.php"; ?><!-- END: FOOTER -->
+        <!-- FOOTER --><?php require_once "vista/parts/footer.php"; ?><!-- END: FOOTER -->
     </div>
     <!-- end: Body Inner -->
     <!-- Scroll top -->

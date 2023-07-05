@@ -18,7 +18,7 @@ ini_set('display_errors', '1');
             foreach($value as $v): ?>
         <div class="modal fade" id="modal<?php echo $v['idProducto'] ?>-editar" tabindex="-1" role="modal" aria-labelledby="modal-label-2" aria-hidden="true">
             <div class="modal-dialog modal-lg">
-                <form class="form-validate" action="" role="form" method="get">
+                <form class="form-validate" action="" role="form" method="post">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h4 id="modal-label-3" class="modal-title">Editando el Producto:</h4>
@@ -61,7 +61,7 @@ ini_set('display_errors', '1');
         <!-- modal agregar stock -->
         <div class="modal fade" id="modal<?php echo $v['idProducto'] ?>-agregaStock" tabindex="-1" role="modal" aria-labelledby="modal-label-2" aria-hidden="true">
             <div class="modal-dialog modal-md">
-                <form class="form-validate" action="" role="form" method="get">
+                <form class="form-validate" action="" role="form" method="post">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h4 id="modal-label-3" class="modal-title">Agregnado stock el Producto:</h4>
@@ -115,7 +115,7 @@ ini_set('display_errors', '1');
                         <p>Mostrando todos los productos del sistema</p>
                     </div>
                     <div class="col-lg-6 text-right">
-                        <a type="button" class="btn btn-light" href="/test/admin/productos?m=agregarProducto"><i class="icon-plus"></i>Agregar Producto</a>
+                        <a type="button" class="btn btn-light" href="/SC502_2C2023_G5/admin/productos/nuevo"><i class="icon-plus"></i>Agregar Producto</a>
                     </div>
                 </div>
 
@@ -160,7 +160,7 @@ ini_set('display_errors', '1');
                                 <td style="font-size: 20px;">
                                     <a data-target="#modal<?php echo $v['idProducto'] ?>-editar" data-toggle="modal" title="Editar"><i class="fa fa-edit"></i></a>
                                     <a data-target="#modal<?php echo $v['idProducto'] ?>-agregaStock" data-toggle="modal" href="#" title="Agregar Stock"><i class="fa fa-plus"></i></a>
-                                    <a href="/test/admin/productos?m=eliminarProducto&idProducto=<?php echo $v['idProducto'] ?>"><i class="fa fa-plus"></i></a>
+                                    <a href="/SC502_2C2023_G5/admin/productos/eliminar?idProducto=<?php echo $v['idProducto'] ?>"><i class="fa fa-plus"></i></a>
                                 </td>
                             </tr>
                             <?php endforeach; ?>

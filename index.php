@@ -1,39 +1,63 @@
 <?php 
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
-require_once "config.php";
 
+// Funcion para realizar funcion del controlador otorgado
+function revisarRequest($controlador, $funcion) {
+    if(isset($_POST['m'])):
+        if(method_exists(`$controlador`,$_POST['m'])):
+            $controlador::{$_POST['m']}();
+        endif;
+    else:
+    $controlador::$funcion();
+    endif;
+}
+
+require_once "config.php";
 $uri = $_SERVER['REQUEST_URI'];
 
+// Enrutador - dependiendo de URL devuelve vistas y funciones
 switch ($uri){
-    case '/test/':
+    case '/SC502_2C2023_G5/':
         require 'vista/home.php';
         break;
-    case str_contains($uri, '/test/admin/usuarios'):
+    case '/SC502_2C2023_G5/admin/usuarios':
         require 'controlador/C_Usuario.php';
-        if(isset($_GET['m'])):
-            if(method_exists('C_Usuario',$_GET['m'])):
-                C_Usuario::{$_GET['m']}();
-            endif;
-        else:
-        C_Usuario::mostrarUsuarios();
-        endif;
+        $controlador = new C_Usuario();
+        $funcion = 'mostrarUsuarios';
+        revisarRequest($controlador, $funcion);
         break;
-    case str_contains($uri, '/test/admin/productos'):
+    case '/SC502_2C2023_G5/admin/usuarios/nuevo':
+        require 'controlador/C_Usuario.php';
+        $controlador = new C_Usuario();
+        $funcion = 'agregarUsuario';
+        revisarRequest($controlador, $funcion);
+        break;
+    case str_contains($uri, '/SC502_2C2023_G5/admin/usuarios/eliminar'):
+        require 'controlador/C_Usuario.php';
+        C_Usuario::eliminarUsuario();
+        break;
+    case '/SC502_2C2023_G5/admin/productos':
         require 'controlador/C_Producto.php';
-        if(isset($_GET['m'])):
-            if(method_exists('C_Producto',$_GET['m'])):
-                C_Producto::{$_GET['m']}();
-            endif;
-        else:
-        C_Producto::mostrarProductos();
-        endif;
+        $controlador = new C_Producto();
+        $funcion = 'mostrarProductos';
+        revisarRequest($controlador, $funcion);
         break;
-    case '/test/login':
+    case '/SC502_2C2023_G5/admin/productos/nuevo':
+        require 'controlador/C_Producto.php';
+        $controlador = new C_Producto();
+        $funcion = 'agregarProducto';
+        revisarRequest($controlador, $funcion);
+        break;
+    case str_contains($uri, '/SC502_2C2023_G5/admin/productos/eliminar'):
+        require 'controlador/C_Producto.php';
+        C_Producto::eliminarProducto();
+        break;
+    case '/SC502_2C2023_G5/login':
         require 'controlador/C_Login.php';
         C_Login::login();
         break;
-    case '/test/logout':
+    case '/SC502_2C2023_G5/logout':
         require 'controlador/C_Login.php';
         C_Login::logout();
         break;

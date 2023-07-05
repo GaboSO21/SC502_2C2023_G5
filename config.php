@@ -1,8 +1,8 @@
 <?php
-define("urlsite", "http://localhost/test");
-define("user_login", "http://localhost/test/login");
-define("admin_users", "http://localhost/test/admin/usuarios");
-define("admin_products", "http://localhost/test/admin/productos");
-define("admin_products_add", "http://localhost/test/admin/productos?m=agregarProducto");
-define("SITE_ROOT", "/opt/lampp/htdocs/test/");
+define("urlsite", "http://localhost/SC502_2C2023_G5");
+define("user_login", "http://localhost/SC502_2C2023_G5/login");
+define("admin_users", "http://localhost/SC502_2C2023_G5/admin/usuarios");
+define("admin_products", "http://localhost/SC502_2C2023_G5/admin/productos");
+define("admin_products_add", "http://localhost/SC502_2C2023_G5/admin/productos/nuevo");
+define("SITE_ROOT", "/opt/lampp/htdocs/SC502_2C2023_G5/");
 

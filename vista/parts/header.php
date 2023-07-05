@@ -6,7 +6,7 @@ $uri = $_SERVER['REQUEST_URI'];
 
 <?php 
 switch ($uri):
-        case '/test/': ?>
+        case '/SC502_2C2023_G5/': ?>
         <!DOCTYPE html>
         <html lang="es">
         <head>
@@ -20,8 +20,8 @@ switch ($uri):
             <link rel="shortcut icon" href="vista/assets/img/logo.png" type="image/x-icon">
         </head>
     <?php break; ?>
-    <?php case str_contains($uri, '/test/admin/productos'): ?>
-    <?php case str_contains($uri, '/test/admin/usuarios'): ?>
+    <?php case str_contains($uri, '/SC502_2C2023_G5/admin/productos'): ?>
+    <?php case str_contains($uri, '/SC502_2C2023_G5/admin/usuarios'): ?>
         <!DOCTYPE html>
         <html lang="es">
         <head>
@@ -35,7 +35,7 @@ switch ($uri):
             <link rel="shortcut icon" href="./views/assets/img/logo.png" type="image/x-icon">
         </head>
     <?php break; ?>
-    <?php case '/test/login': ?>
+    <?php case '/SC502_2C2023_G5/login': ?>
         <!DOCTYPE html>
         <html lang="en">
         <head>
