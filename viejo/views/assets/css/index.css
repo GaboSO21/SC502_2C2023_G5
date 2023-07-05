@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Pacifico&family=Roboto&family=Yellowtail&display=swap');
+
+body{
+    background-color: #D2D8E5;
+    padding: 1.5%;
+    overflow-x: hidden;
+}
+
+
+
+.bg-container{
+    background-color: #445F5C;
+    width: 32%;
+    height: 110vh;
+    top: 0;
+    right: 0;
+    position: absolute;
+    z-index: -10;
+}
+
+
+/*----NavBar----*/
+.nav-container, .main-info-container, .data-container, .productos, .servicios{
+    display: flex;
+}
+
+.nav-container{
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 5%;
+}
+
+.main-info-container{
+    font-size: 2rem;
+    width: 30%;
+    justify-content: space-between;
+    font-family: 'Pacifico';
+}
+
+.nav-title{
+    text-align: center;
+    align-items: center;
+}
+
+.logo-img{
+    width: 40%;
+}
+
+.data-container{
+    font-family: 'Montserrat';
+    font-size: 1.7rem;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.productos,.servicios{
+    align-items: center;
+    justify-content: space-between;
+    transition: 1s;
+}
+
+.productos:hover,.servicios:hover{
+    font-size: 2rem;
+    transition: 1s;
+}
+
+
+
+/*---Content----*/
+.presentation-container{
+    display: flex;
+    justify-content: space-between;
+    width: 87%;
+    margin: 0 auto;
+}
+
+
+
+
+
+.txt-presentation-container{
+    width: 45%;
+}
+
+.txt-presentation-title, p{
+    font-family: 'Montserrat';
+}
+
+.txt-presentation-title{
+    font-size: 1.3rem;
+}
+
+p{
+    font-size: 1rem;
+    letter-spacing: 2px;
+    line-height: 2;
+    text-align: justify;
+}
+
+.btn-iniciar{
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #000;
+    border: #000;
+    width: 25%;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    background: #C37E34;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    transition: 1s;
+    margin-top: 2%;
+    
+  }
+  
+  .btn-iniciar:hover { text-decoration: none;
+    font-size: 25px;
+    width: 30%;
+    transition: 1s;
+  }
+
+
+
+
+
+.img-presentation{
+    display: flex;
+    align-items: center;
+    background-color: #C37E34;
+    width: 40%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.cbd-oil-img{
+    width: 50%;}
+
+.contact-box-container{
+    font-family: 'Yellowtail';
+    margin: 0 auto;
+    font-size: 3rem;
+    transition: 1s;
+}
+
+.contact-box-container:hover{
+    transition: 1s;
+    font-size: 4rem;
+}
+
+
+
+/*About Us*/
+.about-us-container{
+    margin: 20% auto 12%;
+    display: flex;
+    width: 87%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-us-logo{
+    width: 30%;
+}
+
+@keyframes spinning {
+    from { transform: rotate(0deg) }
+    to { transform: rotate(360deg) }
+  }
+  .about-us-logo {
+    animation-name: spinning;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    /* linear | ease | ease-in | ease-out | ease-in-out */
+    animation-timing-function: linear;
+}
+
+.about-us-txt{
+    width: 60%;
+    line-height: 2.5;
+}
+
+
+
+/*Products*/
+.productos-container{
+    background-color: #445F5C;
+    margin: -2.1%;
+    padding: 1.5%;
+}
+.productos-imgs{
+    display: flex;
+    justify-content: space-between;
+    margin: 5% auto;
+    width: 90%;
+}
+
+.img-producto{
+    width: 22%;
+    border: 1px solid black;
+    transition: 1s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+.productos-txt{
+    width: 87%;
+    margin: 5% auto;
+    color: #fff;
+    margin-bottom: 10%;
+}
+
+.productos-txt-content{
+    line-height: 3;
+}
+
+
+
+
+footer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #D2D8E5;
+    margin: -2.1%;
+    padding: 1.5%;
+}
+
+.socials{
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    margin: 0 auto;
+    border-radius: 100px;
+}
+
+.copy{
+    color: #000;
+}
+
+
+
