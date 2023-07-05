@@ -16,6 +16,7 @@ class C_Login {
                 if (!empty($datos)) {
                     $_SESSION['id']=$datos[0][0]['idUsuario'];
                     $_SESSION['correo']=$datos[0][0]['correo'];
+                    $_SESSION['rol']=$datos[0][0]['idRol'];
                     header("location:".urlsite);
                 } else {
                     echo 'Datos invalidos.';
@@ -30,7 +31,6 @@ class C_Login {
         session_destroy();
         header('location:'.user_login);
     }
-
 }
 
 ?>
