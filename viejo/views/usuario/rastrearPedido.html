@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="../assets/css/rastrearPedido.css" />
+
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="main-info-container">
+                <img class="logo-img" src="../assets/img/Logo.png" alt="" />
+                <h4 class="nav-title">AuraBotanica</h4>
+            </div>
+            <div class="data-container">
+                <div class="productos">
+                    <h5>Productos</h5>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="servicios">
+                    <h5>Servicios</h5>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="rastreo">
+        <label class="label1" for="">Ingrese su número de rastreo</label>
+        <input class="registrobox" type="registrobox" placeholder="Número de rastreo">
+        <br>
+        <input class="submit" type="submit" value="Regresar">
+        <input class="submit2" type="submit" value="Continuar" onclick="mostrarVentanaEmergente()">
+    </div>
+
+    <div class="window-notice" id="window-notice">
+        <div class="content">
+            <div class="content-text">TABLA CON LA INFORMACION DE RASTREO
+                <input class="submit" type="submit" value="Regresar">
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/rastrearPedidos.js"></script>
+</body>
+
+</html>

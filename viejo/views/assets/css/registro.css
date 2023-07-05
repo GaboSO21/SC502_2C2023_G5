@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Pacifico&family=Roboto&family=Yellowtail&display=swap');
+
+body {
+    background-color: #D2D8E5;
+    padding: 1.5%;
+    overflow-x: hidden;
+}
+
+
+
+.bg-container{
+    background-color: #445F5C;
+    width: 32%;
+    height: 110vh;
+    top: 0;
+    right: 0;
+    position: absolute;
+    z-index: -10;
+}
+/*----NavBar----*/
+.nav-container, .main-info-container, .data-container, .productos, .servicios{
+    display: flex;
+}
+
+.nav-container{
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 5%;
+}
+
+.main-info-container{
+    font-size: 2rem;
+    width: 30%;
+    justify-content: space-between;
+    font-family: 'Pacifico';
+}
+
+.nav-title{
+    text-align: center;
+    align-items: center;
+}
+
+.logo-img{
+    width: 40%;
+}
+
+.data-container{
+    font-family: 'Montserrat';
+    font-size: 1.7rem;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.productos,.servicios{
+    align-items: center;
+    justify-content: space-between;
+    transition: 1s;
+}
+
+.productos:hover,.servicios:hover{
+    font-size: 2rem;
+    transition: 1s;
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: justify;
+    font-family: 'Montserrat';
+    font-size: 2rem;
+  }
+  
+  .formulario form {
+    margin-top: 20px;
+  }
+  
+  .formulario label,
+  .formulario input,
+  .formulario button {
+    margin: 10px;
+  }
+  
+  .formulario label {
+    flex-basis: 120px;
+  }
+
+  .inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+.registrobox{
+    background-color: rgba(127, 128, 130, 0.61);
+    border-style: none;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    outline: none;
+    font-size: 15px;
+    width: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.50);
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.registrobox::placeholder{
+    color: white;
+}
+
+
+.submit{
+    background-color: rgba(23, 38, 35);
+    border-style: none;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+}
+.submit2{
+    background-color: rgba(23, 38, 35);
+    border-style: none;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    position: relative;
+    left: 80px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
