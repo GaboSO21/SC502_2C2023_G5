@@ -3,9 +3,9 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
 // Funcion para realizar funcion del controlador otorgado
-function revisarRequest($controlador, $funcion) {
+function revisarRequest($string, $controlador, $funcion) {
     if(isset($_POST['m'])):
-        if(method_exists(`$controlador`,$_POST['m'])):
+        if(method_exists($string, $_POST['m'])):
             $controlador::{$_POST['m']}();
         endif;
     else:
@@ -25,13 +25,13 @@ switch ($uri){
         require 'controlador/C_Usuario.php';
         $controlador = new C_Usuario();
         $funcion = 'mostrarUsuarios';
-        revisarRequest($controlador, $funcion);
+        revisarRequest('C_Usuario', $controlador, $funcion);
         break;
     case '/SC502_2C2023_G5/admin/usuarios/nuevo':
         require 'controlador/C_Usuario.php';
         $controlador = new C_Usuario();
         $funcion = 'agregarUsuario';
-        revisarRequest($controlador, $funcion);
+        revisarRequest('C_Usuario', $controlador, $funcion);
         break;
     case str_contains($uri, '/SC502_2C2023_G5/admin/usuarios/eliminar'):
         require 'controlador/C_Usuario.php';
@@ -41,13 +41,13 @@ switch ($uri){
         require 'controlador/C_Producto.php';
         $controlador = new C_Producto();
         $funcion = 'mostrarProductos';
-        revisarRequest($controlador, $funcion);
+        revisarRequest('C_Producto', $controlador, $funcion);
         break;
     case '/SC502_2C2023_G5/admin/productos/nuevo':
         require 'controlador/C_Producto.php';
         $controlador = new C_Producto();
         $funcion = 'agregarProducto';
-        revisarRequest($controlador, $funcion);
+        revisarRequest('C_Producto', $controlador, $funcion);
         break;
     case str_contains($uri, '/SC502_2C2023_G5/admin/productos/eliminar'):
         require 'controlador/C_Producto.php';
