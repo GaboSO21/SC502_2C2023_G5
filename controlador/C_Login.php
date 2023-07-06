@@ -1,11 +1,11 @@
 <?php
 
-session_start();
 require_once "modelo/Usuario.php";
 
 class C_Login {
 
     static function login(){
+        session_start();
         require_once "vista/usuario/login.php";
         $usuario = new Usuario();
         if(!empty($_POST['loginSubmit'])){
@@ -16,7 +16,7 @@ class C_Login {
                 if (!empty($datos)) {
                     $_SESSION['id']=$datos[0][0]['idUsuario'];
                     $_SESSION['correo']=$datos[0][0]['correo'];
-                    $_SESSION['rol']=$datos[0][0]['idRol'];
+                    $_SESSION['idRol']=$datos[0][0]['idRol'];
                     header("location:".urlsite);
                 } else {
                     echo 'Datos invalidos.';
@@ -30,6 +30,44 @@ class C_Login {
     static function logout() {
         session_destroy();
         header('location:'.user_login);
+    }
+
+    static function register() {
+        require_once 'vista/usuario/page-user-register.php';
+        if(!empty($_POST['registerSubmit'])) {
+            if( !empty($_POST['nombre']) and !empty($_POST['primApellido']) and
+                !empty($_POST['segApellido']) and !empty($_POST['cedula']) and
+                !empty($_POST['contrasenna']) and !empty($_POST['senalesExactas']) and
+                !empty($_POST['provincia']) and !empty($_POST['canton']) and
+                !empty($_POST['distrito']) and !empty($_POST['codPostal']) and
+                !empty($_POST['correo'])){
+
+                $nombre = $_POST['nombre'];
+                $primApellido = $_POST['primApellido'];
+                $segApellido = $_POST['segApellido'];
+                $cedula = $_POST['cedula'];
+                $contrasenna = $_POST['contrasenna'];
+                $senalesExactas = $_POST['senalesExactas'];
+                $provincia = $_POST['provincia'];
+                $canton = $_POST['canton'];
+                $distrito = $_POST['distrito'];
+                $codPostal = $_POST['codPostal'];
+                $correo = $_POST['correo'];
+                $idRol = 2;
+
+                $usuario = new Usuario();
+
+                $dataUsuario = "'".$nombre."', '".$primApellido."', '".$segApellido."', '".$cedula."', '".$contrasenna."', ".$idRol;
+                $dataDireccion = "'".$provincia."', '".$canton."', '".$distrito."', ".$codPostal.", '".$senalesExactas."'";
+
+                $registro = $usuario->register($correo, $dataUsuario, $dataDireccion);
+
+                header("location:".user_login);
+
+            } else {
+                echo 'Campos vacios';
+            }
+        }
     }
 }
 

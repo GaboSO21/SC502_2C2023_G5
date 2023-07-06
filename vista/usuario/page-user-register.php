@@ -8,10 +8,10 @@
     <link rel="icon" type="image/png" href="images/favicon.png">   
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Document title -->
-    <title>POLO | The Multi-Purpose HTML5 Template</title>
+    <title>Registro</title>
     <!-- Stylesheets & Fonts -->
-    <link href="css/plugins.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="vista/assets/css/plugins.css" rel="stylesheet">
+    <link href="vista/assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -28,7 +28,7 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-6 center p-40 background-white b-r-6">
-                            <form class="form-transparent-grey">
+                            <form class="form-transparent-grey" method="post">
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <h3>Register New Account</h3>
@@ -36,50 +36,54 @@
                                     </div>
                                     <div class="col-lg-6 form-group">
                                         <label class="sr-only">First Name</label>
-                                        <input type="text" value="" placeholder="First Name" class="form-control">
+                                        <input name="nombre" type="text" value="" placeholder="First Name" class="form-control">
                                     </div>
                                     <div class="col-lg-6 form-group">
                                         <label class="sr-only">Last Name</label>
-                                        <input type="text" value="" placeholder="Last Name" class="form-control">
+                                        <input name="primApellido" type="text" value="" placeholder="Last Name" class="form-control">
                                     </div>
                                     <div class="col-lg-6 form-group">
-                                        <label class="sr-only">Username</label>
-                                        <input type="text" value="" placeholder="Username" class="form-control">
+                                        <label class="sr-only">Second Last Name</label>
+                                        <input name="segApellido" type="text" value="" placeholder="Second Last Name" class="form-control">
                                     </div>
                                     <div class="col-lg-6 form-group">
-                                        <label class="sr-only">Password</label>
-                                        <input type="password" value="" placeholder="Password" class="form-control">
+                                        <label class="sr-only">Cedula</label>
+                                        <input name="cedula" type="text" value="" placeholder="Cedula" class="form-control">
                                     </div>
                                     <div class="col-lg-12 form-group">
-                                        <label class="sr-only">Address</label>
-                                        <input type="text" value="" placeholder="Address" class="form-control">
+                                        <label class="sr-only">Password</label>
+                                        <input name="contrasenna" type="password" value="" placeholder="Password" class="form-control">
+                                    </div>
+                                    <div class="col-lg-12 form-group">
+                                        <label class="sr-only">Sennales exactas</label>
+                                        <input name="senalesExactas" type="text" value="" placeholder="Sennales exactas" class="form-control">
                                     </div>
                                     <div class="col-lg-6 form-group">
-                                        <label class="sr-only">Apartment, suite, unit etc.</label>
-                                        <input type="text" value="" placeholder="Apartment, suite, unit etc." class="form-control">
+                                        <label class="sr-only">Provincia</label>
+                                        <input name="provincia" type="text" value="" placeholder="Provincia" class="form-control">
                                     </div>
                                     <div class="col-lg-6 form-group">
-                                        <label class="sr-only">Town / City</label>
-                                        <input type="text" value="" placeholder="Town / City" class="form-control">
+                                        <label class="sr-only">Canton</label>
+                                        <input name="canton" type="text" value="" placeholder="Canton" class="form-control">
                                     </div>
                                     <div class="col-lg-6 form-group">
-                                        <label class="sr-only">State / County</label>
-                                        <input type="text" value="" placeholder="State / County" class="form-control">
+                                        <label class="sr-only">Distrito</label>
+                                        <input name="distrito" type="text" value="" placeholder="Distrito" class="form-control">
                                     </div>
                                     <div class="col-lg-6 form-group">
-                                        <label class="sr-only">Postcode / Zip</label>
-                                        <input type="text" value="" placeholder="Postcode / Zip" class="form-control">
+                                        <label class="sr-only">Codigo postal</label>
+                                        <input name="codPostal" type="number" value="" placeholder="Codigo postal" class="form-control">
                                     </div>
                                     <div class="col-lg-6 form-group">
                                         <label class="sr-only">Email</label>
-                                        <input type="text" value="" placeholder="Email" class="form-control">
+                                        <input name="correo" type="text" value="" placeholder="Email" class="form-control">
                                     </div>
                                     <div class="col-lg-6 form-group">
                                         <label class="sr-only">Phone</label>
                                         <input type="text" value="" placeholder="Phone" class="form-control">
                                     </div>
                                     <div class="col-lg-12 form-group">
-                                        <button class="btn" type="button">Register New Account </button>
+                                        <input name="registerSubmit" class="btn" type="submit" value="Registrar">
                                         <button type="button" class="btn btn-danger m-l-10">Cancel</button>
                                     </div>
                                 </div>

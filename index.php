@@ -61,5 +61,9 @@ switch ($uri){
         require 'controlador/C_Login.php';
         C_Login::logout();
         break;
+    case '/SC502_2C2023_G5/register':
+        require 'controlador/C_Login.php';
+        C_Login::register();
+        break;
 
 }
