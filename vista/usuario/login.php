@@ -19,12 +19,9 @@ ini_set('display_errors', '1');
             <h2>AuraBotanica</h2>
 
             <div class="inputs">
-
                 <input name="correo" class="email" type="email" placeholder="Correo Electronico">
                 <input name="contrasenna" class="psw" type="password" placeholder="Contraseña">
-
                 <input name="loginSubmit" class="submit" type="submit" value="Continuar">
-
             </div>
         </form>
     </div>
