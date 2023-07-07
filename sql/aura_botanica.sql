@@ -17,6 +17,7 @@ CREATE TABLE Usuario (
     correo varchar(45) not null,
     contrasenna varchar(45) not null,
     idRol int not null,
+    status boolean not null,
     FOREIGN KEY(idRol) REFERENCES Rol(idRol),
     PRIMARY KEY(idUsuario)
 );
@@ -72,6 +73,7 @@ CREATE TABLE TipoProducto (
 
 CREATE TABLE Producto (
     idProducto int not null AUTO_INCREMENT,
+    img varchar(200) not null,
     nombre varchar(45) not null,
     descripcion varchar(200) not null,
     stock int not null,
