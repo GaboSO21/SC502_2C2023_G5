@@ -14,37 +14,91 @@
         <!-- FIN NAVBAR -->
 
         <!-- MODAL EDITAR DATOS PERSONALES -->
-        <div class="modal fade" id="modal1-editar" tabindex="-1" role="modal" aria-labelledby="modal-label-2" aria-hidden="true">
+        <div class="modal fade" id="modal1-editarDatos" tabindex="-1" role="modal" aria-labelledby="modal-label-2" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <form class="form-validate" action="" role="form" method="post">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 id="modal-label-3" class="modal-title">Editando el Producto:</h4>
+                            <h4 id="modal-label-3" class="modal-title">Editando mis datos:</h4>
                             <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
                         </div>
                         <div class="modal-body">
+                            <input hidden="" type="number" name="txt_idUsuariovalue="">
                             <div class="form-row">
-                                    <input hidden="" type="number" name="txt_idArticulo" value="">
                                 <div class="form-group col-md-6">
-                                    <label for="name">Nombre del Articulo</label>
-                                    <input type="text" value="" class="form-control" name="txt_nombreProducto" aria-required="true" required="">
+                                    <label for="username">Nombre</label>
+                                    <input type="text" class="form-control" name="NombreCompleto" required>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="name">Descripcion del Articulo</label>
-                                    <input type="text" value="" class="form-control" name="txt_descripcionProducto" aria-required="true" required="">
+                                    <label for="primApellido">Primer Apellido</label>
+                                    <input type="text" class="form-control" name="primApellido" required>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="name">Precio del Articulo</label>
-                                    <input type="number" value="" class="form-control" name="txt_nombreProducto" aria-required="true" required="">
+                                    <label for="segApellido">Segundo Apellido</label>
+                                    <input type="text" class="form-control" name="segApellido" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="email">Correo Electronico</label>
+                                    <input type="email" class="form-control" name="email" required>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="gender">Status del Articulo</label>
-                                    <select class="form-control" name="txt_statusProdcuto" type="text" aria-required="true" required="">
-                                            <option value="1" selected="">Activo</option>
-                                            <option value="2">Desactivado</option>
-                                    </select>
+                                    <label for="gender">Cedula</label>
+                                    <input type="text" class="form-control" name="cedula" required>
                                 </div>
+                                <div class="form-group col-md-6">
+                                    <label for="gender">Rol</label>
+                                    <input class="form-control" type="text" name="rol" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button data-dismiss="modal" class="btn btn-b" type="button">Cerrar</button>
+                            <button class="btn btn-b" type="submit" id="form-submit">Guardar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- FIN MODAL EDITAR DATOS PERSONALES -->
 
+        <!-- MODAL EDITAR DATOS PERSONALES -->
+        <div class="modal fade" id="modal2-editarDireccion" tabindex="-1" role="modal" aria-labelledby="modal-label-2" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <form class="form-validate" action="" role="form" method="post">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 id="modal-label-3" class="modal-title">Editando mis datos:</h4>
+                            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                        </div>
+                        <div class="modal-body">
+                            <input hidden="" type="number" name="txt_idUsuariovalue="">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="city">Provincia</label>
+                                    <input type="text" class="form-control" name="city" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="address">Distrito</label>
+                                    <input type="text" class="form-control" name="district" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label>Codigo Postal</label>
+                                    <input type="number" class="form-control" name="zip" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="address">Address</label>
+                                    <input type="text" class="form-control" name="address" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="Canton">Canton</label>
+                                    <input type="text" class="form-control" name="canton" required>
+                                </div>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -58,7 +112,6 @@
         <!-- FIN MODAL EDITAR DATOS PERSONALES -->
 
         <!-- MODAL LISTA DE PRODUCTOS -->
-        <!-- modal lista usuarios-->
         <div class="modal fade" id="modal3-lista" tabindex="-1" role="modal" aria-labelledby="modal-label-2" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
@@ -110,6 +163,47 @@
         </div>
         <!-- end: modal -->
 
+        <!-- MODAL EDITAR DATOS PERSONALES -->
+        <div class="modal fade" id="modal4-camPass" tabindex="-1" role="modal" aria-labelledby="modal-label-2" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <form class="form-validate" action="" role="form" method="post">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 id="modal-label-3" class="modal-title">Editando mis datos:</h4>
+                            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                        </div>
+                        <div class="modal-body">
+                            <input hidden="" type="number" name="txt_idUsuario" value="">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="contraactual">Contraseña Actual </label>
+                                    <input type="text" class="form-control" name="contraactual" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="text">Nueva Contraseña </label>
+                                    <input type="text" class="form-control" name="nuevacontra" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="cedula">Confirmacion Contraseña</label>
+                                    <input type="text" class="form-control" name="confirmacontra" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button data-dismiss="modal" class="btn btn-b" type="button">Cerrar</button>
+                            <button class="btn btn-b" type="submit" id="form-submit">Guardar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- FIN MODAL EDITAR DATOS PERSONALES -->
+
+
+
+
         <!-- Page title -->
         <section id="page-title" data-bg-parallax="../assets/img/cbd-wall.jpg">
             <div class="container">
@@ -153,13 +247,13 @@
                                     <div class="tab-pane fade show active list-icon list-icon-colored" id="usuario" role="tabpanel" aria-labelledby="popular-tab">
                                         <ul>
                                             <li class="nav-item">
-                                                <a class="nav-link"><i class="fa fa-pen"></i>Editar mis datos</a>
+                                                <a class="nav-link" data-target="#modal1-editarDatos" data-toggle="modal" href="#"><i class="fa fa-pen"></i>Editar mis datos</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link"><i class="fa fa-pen"></i>Editar direccion</a>
+                                                <a class="nav-link" data-target="#modal2-editarDireccion" data-toggle="modal" href="#"><i class="fa fa-pen"></i>Editar mi Direccion</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link"><i class="fa fa-pen"></i>Recent</a>
+                                                <a class="nav-link" data-target="#modal4-camPass" data-toggle="modal" href="#"><i class="fa fa-pen"></i>Cambiar mi Contraseña</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -236,8 +330,8 @@
                                                 <div class="form-group col-md-6">
                                                     <label for="Canton">Canton</label>
                                                     <input type="text" class="form-control" name="canton" readonly>
-                                                    </div>
                                                 </div>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -287,7 +381,55 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- FIN: ACORDEON DATOS PERSONALES-->
+                            <!-- FIN: ACORDEON COMPRAS PERSONALES-->
+                            <div class="line"></div>
+
+                            <!-- ACORDEON CURSO -->
+                            <div class="ac-item">
+                                <h5 class="ac-title"><i class="fa fa-school"></i>SERVICIOS</h5>
+                                <div class="ac-content">
+                                    <div class="col-lg-12">
+                                        <table id="datatable" class="table table-bordered table-hover" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>Imagen</th>
+                                                    <th>Nombre</th>
+                                                    <th>Fecha</th>
+                                                    <th>Estatus</th>
+                                                    <th>Acciones</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td> </td>
+                                                    <td class="text-center">
+                                                        <span class="badge badge-pill badge-secondary">Pendiente</span>
+                                                        <span class="badge badge-pill badge-primary">En Proceso</span>
+                                                        <span class="badge badge-pill badge-warning">Revisión</span>
+                                                        <span class="badge badge-pill badge-danger">Cancelado</span>
+                                                        <span class="badge badge-pill badge-success">Entregado</span>
+                                                    </td>
+                                                    <td style="font-size: 20px;">
+                                                        <a data-target="#modal4-detalles" data-toggle="modal" href="#" title="Detalles"><i class="fa fa-list"></i></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>Imagen</th>
+                                                    <th>Nombre</th>
+                                                    <th>Fecha</th>
+                                                    <th>Estatus</th>
+                                                    <th>Acciones</th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
