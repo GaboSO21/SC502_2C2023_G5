@@ -12,7 +12,7 @@ class Producto {
 
     public function mostrar() {
         $consulta = 'SELECT Producto.*, TipoProducto.nombre as "TipoNombre", TipoProducto.descripcion as "TipoDesc" FROM Producto 
-                     JOIN TipoProducto ON Producto.idTipoProducto = TipoProducto.idTipoProducto;';
+                    JOIN TipoProducto ON Producto.idTipoProducto = TipoProducto.idTipoProducto;';
         $resultado = $this->db->query($consulta);
         while($filas = $resultado->FETCHALL(PDO::FETCH_ASSOC)) {
             $this->datos[]=$filas;
