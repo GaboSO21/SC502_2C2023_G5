@@ -6,6 +6,15 @@ body{
     overflow-x: hidden;
 }
 
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+a::after{
+    color: #000;
+}
+
 
 
 .bg-container{
@@ -43,7 +52,7 @@ body{
 }
 
 .logo-img{
-    width: 40%;
+    width: 100%;
 }
 
 .data-container{
