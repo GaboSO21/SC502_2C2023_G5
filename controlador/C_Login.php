@@ -15,8 +15,8 @@ class C_Login {
                 $datos = $usuario->login($correo, $contrasenna);
                 if (!empty($datos)) {
                     $_SESSION['id']=$datos[0][0]['idUsuario'];
-                    $_SESSION['correo']=$datos[0][0]['correo'];
                     $_SESSION['idRol']=$datos[0][0]['idRol'];
+                    $_SESSION['contrasenna']=$datos[0][0]['contrasenna'];
                     header("location:".urlsite);
                 } else {
                     echo 'Datos invalidos.';

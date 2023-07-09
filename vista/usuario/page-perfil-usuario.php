@@ -1,3 +1,9 @@
+<?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,8 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Perfil</title>
-    <link href="../assets/css/plugins.css" rel="stylesheet">
-    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="vista/assets/css/plugins.css" rel="stylesheet">
+    <link href="vista/assets/css/style.css" rel="stylesheet">
 </head>
 <body>
     <div class="body-inner">
@@ -23,39 +29,38 @@
                             <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
                         </div>
                         <div class="modal-body">
-                            <input hidden="" type="number" name="txt_idUsuariovalue="">
+                            <input type="hidden" name="idUsuario" value="<?php echo $datosUsuario['idUsuario'] ?>">
+                            <input type="hidden" name="contrasena" value="<?php echo $datosUsuario['contrasenna'] ?>">
+                            <input type="hidden" name="idRol" value="<?php echo $datosUsuario['idRol'] ?>">
+                            <input type="hidden" name="m" value="actualizarPerfil" >
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="username">Nombre</label>
-                                    <input type="text" class="form-control" name="NombreCompleto" required>
+                                    <input value="<?php echo $datosUsuario['nombre'] ?>" type="text" class="form-control" name="nombre" required>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="primApellido">Primer Apellido</label>
-                                    <input type="text" class="form-control" name="primApellido" required>
+                                    <input value="<?php echo $datosUsuario['primApellido'] ?>" type="text" class="form-control" name="primerApellido" required>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="segApellido">Segundo Apellido</label>
-                                    <input type="text" class="form-control" name="segApellido" required>
+                                    <input value="<?php echo $datosUsuario['segApellido'] ?>" type="text" class="form-control" name="segundoApellido" required>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="email">Correo Electronico</label>
-                                    <input type="email" class="form-control" name="email" required>
+                                    <input value="<?php echo $datosUsuario['correo'] ?>" type="email" class="form-control" name="correo" required>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="gender">Cedula</label>
-                                    <input type="text" class="form-control" name="cedula" required>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="gender">Rol</label>
-                                    <input class="form-control" type="text" name="rol" readonly>
+                                    <input value="<?php echo $datosUsuario['cedula'] ?>" type="text" class="form-control" name="cedula" required>
                                 </div>
                             </div>
                         </div>
                         <div class="modal-footer">
                             <button data-dismiss="modal" class="btn btn-b" type="button">Cerrar</button>
-                            <button class="btn btn-b" type="submit" id="form-submit">Guardar</button>
+                            <input class="btn btn-b" type="submit" id="form-submit">
                         </div>
                     </div>
                 </form>
@@ -73,31 +78,32 @@
                             <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
                         </div>
                         <div class="modal-body">
-                            <input hidden="" type="number" name="txt_idUsuariovalue="">
+                            <input type="hidden" name="idUsuario" value="<?php echo $datosUsuario['idUsuario'] ?>">
+                            <input type="hidden" name="m" value="actualizarDireccion">
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="city">Provincia</label>
-                                    <input type="text" class="form-control" name="city" required>
+                                    <input value="<?php echo $datosUsuario['provincia'] ?>" type="text" class="form-control" name="provincia" required>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="address">Distrito</label>
-                                    <input type="text" class="form-control" name="district" required>
+                                    <input value="<?php echo $datosUsuario['distrito'] ?>" type="text" class="form-control" name="distrito" required>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label>Codigo Postal</label>
-                                    <input type="number" class="form-control" name="zip" required>
+                                    <input value="<?php echo $datosUsuario['codPostal'] ?>" type="number" class="form-control" name="codPostal" required>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="address">Address</label>
-                                    <input type="text" class="form-control" name="address" required>
+                                    <input value="<?php echo $datosUsuario['senalesExactas'] ?>" type="text" class="form-control" name="senalesExactas" required>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="Canton">Canton</label>
-                                    <input type="text" class="form-control" name="canton" required>
+                                    <input value="<?php echo $datosUsuario['canton'] ?>" type="text" class="form-control" name="canton" required>
                                 </div>
                             </div>
                         </div>
@@ -173,11 +179,12 @@
                             <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
                         </div>
                         <div class="modal-body">
-                            <input hidden="" type="number" name="txt_idUsuario" value="">
+                            <input type="hidden" name="idUsuario" value="<?php echo $datosUsuario['idUsuario'] ?>">
+                            <input type="hidden" name="m" value="cambiarContrasenna">
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="contraactual">Contraseña Actual </label>
-                                    <input type="text" class="form-control" name="contraactual" required>
+                                    <input type="text" class="form-control" name="contrasena" required>
                                 </div>
                             </div>
                             <div class="form-row">
@@ -208,12 +215,12 @@
         <section id="page-title" data-bg-parallax="../assets/img/cbd-wall.jpg">
             <div class="container">
                 <div class="page-title">
-                    <h1>❤️ Bienvenido de Nuevo ❤️</br>Nombre Persiona</h1>
+                    <h1> Bienvenido de Nuevo </br><?php echo $datosUsuario['nombre'] ?></h1>
                     <span>Perfil de Usuario</span>
                 </div>
                 <div class="breadcrumb">
                     <ul>
-                        <li><a href="">Inicio</a> </li>
+                        <li><a href="/SC502_2C2023_G5/">Inicio</a> </li>
                         <li class="active"><a href="">Perfil</a> </li>
                     </ul>
                 </div>
@@ -287,21 +294,17 @@
                                             <div class="form-row">
                                                 <div class="form-group col-md-6">
                                                     <label for="username">Nombre Completo</label>
-                                                    <input type="text" class="form-control" name="NombreCompleto" readonly>
+                                                    <input value="<?php echo $datosUsuario['nombre'].' '.$datosUsuario['primApellido'].' '.$datosUsuario['segApellido']  ?>" type="text" class="form-control" name="NombreCompleto" readonly>
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="email">Correo Electronico</label>
-                                                    <input type="email" class="form-control" name="email" readonly>
+                                                    <input value="<?php echo $datosUsuario['correo'] ?>" type="email" class="form-control" name="email" readonly>
                                                 </div>
                                             </div>
                                             <div class="form-row">
                                                 <div class="form-group col-md-6">
                                                     <label for="gender">Cedula</label>
-                                                    <input type="text" class="form-control" name="cedula" readonly>
-                                                </div>
-                                                <div class="form-group col-md-6">
-                                                    <label for="gender">Rol</label>
-                                                    <input class="form-control" type="text" name="rol" readonly>
+                                                    <input value="<?php echo $datosUsuario['cedula'] ?>" type="text" class="form-control" name="cedula" readonly>
                                                 </div>
                                             </div>
                                             <div class="line"></div>
@@ -309,27 +312,27 @@
                                             <div class="form-row">
                                                 <div class="form-group col-md-6">
                                                     <label for="city">Provincia</label>
-                                                    <input type="text" class="form-control" name="city" readonly>
+                                                    <input value="<?php echo $datosUsuario['provincia'] ?>" type="text" class="form-control" name="city" readonly>
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="address">Distrito</label>
-                                                    <input type="text" class="form-control" name="district" readonly>
+                                                    <input value="<?php echo $datosUsuario['distrito'] ?>" type="text" class="form-control" name="district" readonly>
                                                 </div>
                                             </div>
                                             <div class="form-row">
                                                 <div class="form-group col-md-6">
                                                     <label>Codigo Postal</label>
-                                                    <input type="number" class="form-control" name="zip" readonly>
+                                                    <input value="<?php echo $datosUsuario['codPostal'] ?>" type="number" class="form-control" name="zip" readonly>
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="address">Address</label>
-                                                    <input type="text" class="form-control" name="address" readonly>
+                                                    <input value="<?php echo $datosUsuario['senalesExactas'] ?>" type="text" class="form-control" name="address" readonly>
                                                 </div>
                                             </div>
                                             <div class="form-row">
                                                 <div class="form-group col-md-6">
                                                     <label for="Canton">Canton</label>
-                                                    <input type="text" class="form-control" name="canton" readonly>
+                                                    <input value="<?php echo $datosUsuario['canton'] ?>" type="text" class="form-control" name="canton" readonly>
                                                 </div>
                                             </div>
                                         </div>
@@ -441,11 +444,11 @@
         <!-- FIN FOOTER -->
     </div>
     <!---------------SCRIPTS---------------------->
-    <script src="../assets/js/jquery.js"></script>
-    <script src="../assets/js/plugins.js"></script>
-    <script src="../assets/js/functions.js"></script>
+    <script src="vista/assets/js/jquery.js"></script>
+    <script src="vista/assets/js/plugins.js"></script>
+    <script src="vista/assets/js/functions.js"></script>
     <!--Datatables plugin files-->
-    <script src='../assets/plugins/datatables/datatables.min.js'></script>
+    <script src='vista/assets/plugins/datatables/datatables.min.js'></script>
     <script>
         $(document).ready(function () {
             $('#datatable').DataTable({

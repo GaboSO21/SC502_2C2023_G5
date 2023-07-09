@@ -65,5 +65,11 @@ switch ($uri){
         require 'controlador/C_Login.php';
         C_Login::register();
         break;
+    case str_contains($uri, '/SC502_2C2023_G5/perfil'):
+        require 'controlador/C_Usuario.php';
+        $controlador = new C_Usuario();
+        $funcion = 'verPerfil';
+        revisarRequest('C_Usuario', $controlador, $funcion);
+        break;
 
 }

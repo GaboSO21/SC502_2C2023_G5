@@ -1,11 +1,8 @@
 <?php 
 session_start();
 if(!empty($_SESSION['id'])){
-
     echo $_SESSION['id']." ";
-    echo $_SESSION['correo'].' ';
     echo $_SESSION['idRol'].' ';
-
 }
 ?>
 <?php require_once "vista/parts/header.php" ?>

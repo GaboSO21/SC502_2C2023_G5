@@ -19,6 +19,39 @@ class Usuario {
         }
         return $this->datos;
     }
+    
+    //--Funcion para agarrar usuario logueado--
+    public function mostrarUsuarioLogueado($idUsuario) {
+        $consulta = "SELECT * FROM Usuario JOIN Direccion ON Usuario.idUsuario = Direccion.idUsuario 
+                    WHERE Usuario.idUsuario=".$idUsuario.";";
+        $resultado = $this->db->query($consulta);
+        while($filas = $resultado->FETCHALL(PDO::FETCH_ASSOC)) {
+            $this->datos[]=$filas;
+        }
+        return $this->datos;
+    }
+
+    //--Funcion para actualizar direccion de usuario logueado--
+    public function actualizarContrasenna($idUsuario, $contrasenna) {
+        $consulta = "UPDATE Usuario SET contrasenna='".$contrasenna."' WHERE idUsuario=".$idUsuario.";";
+        $resultado = $this->db->query($consulta);
+        if ($resultado) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    //--Funcion para actualizar direccion de usuario logueado--
+    public function actualizarDireccion($data, $idUsuario) {
+        $consulta = "UPDATE Direccion SET ".$data." WHERE idUsuario=".$idUsuario.";";
+        $resultado = $this->db->query($consulta);
+        if ($resultado) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     //--Funcion para registrar 
     public function register($correo, $dataUsuario, $dataDireccion) {
